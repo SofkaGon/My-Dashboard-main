@@ -1,0 +1,326 @@
+body{
+    background-color: #ffffff;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Tahoma', sans-serif;
+    .caacupe-one-regular {
+  font-family: "Caacupe One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+    navbar{
+        background-color: #1e254f;
+        padding: 200px;
+        border-bottom: 2px solid #5e67a0;
+        flex-direction: row;
+        align-items: left;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    h1 {
+        color: #5e67a0;
+        font-family: 'Caacupe One', sans-serif;
+        font-size: 60px;
+    }
+    a{
+        color: #d1aff9;
+        text-decoration: none;
+    }
+    h2{
+        color: #d1aff9;
+    }
+    .learnMore{
+        background-color: #1e254f;
+        margin-top: 20px;
+        position: relative;
+    }
+    
+    .SoulsSeek{
+        margin-bottom: 20px;
+        border-bottom: 2px solid #5e67a0;
+        background-image: url("web1.png");
+         background-size: cover;
+      background-position: center;
+      height: 100vh;
+      /*will move when scrolled*/
+      position: relative;
+    }
+
+    button#AboutUs:hover{
+        background-color: #5e67a0;
+        color: #ffffff;
+        transform: scale(1.05);
+    }
+    
+        
+
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      /*sans serif font as it's more accessible and easier to read. As well as is less distracting from visuals*/
+      font-family: Arial, sans-serif;
+      word-spacing: normal;
+      letter-spacing: normal;
+    }
+    /*styling for paragraph*/
+    body p{
+      /*makes it easier to read*/
+      line-height: 120%;
+    }
+
+
+  /*footer*/
+  footer{
+    background-color: #b0beed;
+    width: 100%;
+    height: 100px;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+  }
+
+  #clock {
+    color: #d1aff9;
+    font-family: 'Caacupe One', sans-serif;
+    font-size: 40px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height:50vh;
+    justify-content: center;
+  }
+
+  .clock span{
+    width: 100px;
+    height: 100px;
+    background-color: #1e254f;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .clock .text{
+    height: 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #5e67a0;
+  }
+
+  .artwork-stage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1366 / 768;
+  }
+
+  .artwork-background {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('web2.png'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .artwork-panel {
+    position: absolute;
+    top: 19%;
+    width: 35%;
+    height: 62%;
+    color: #1e254f;
+    -webkit-text-stroke: 0.5px #b1bdff; 
+  }
+
+  .quote-panel {
+    left: 14.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8%;
+    font-size: clamp(12px, 2vw, 28px);
+    text-align: center;
+  }
+
+  .quote-panel p {
+    width: 100%;
+  }
+
+  .calendar-panel {
+    left: 50.7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #calendarStyle{
+    width: 90%; 
+    height: 90%; 
+    margin: 0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 0px;
+    font-family: 'Caacupe One', sans-serif;
+    font-size: clamp(9px, 1.45vw, 20px);
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-text-stroke: 0.5px #b1bdff; 
+  }
+
+  #calendarStyleInner{
+    font-family: 'Caacupe One', sans-serif;
+    font-size: clamp(14px, 2.9vw, 40px);
+    padding-top: 0;  
+    -webkit-text-stroke: 0.5px black; 
+    color: #b1bdff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    line-height: 1.5;
+  }
+  footer {
+    -webkit-text-stroke: 0.5px black; 
+    color: #1e254f; 
+    line-height: 1.5;
+    font-size: clamp(14px, 1vw, 40px);
+
+  }
+
+
+ @media only screen and (max-width: 800px) {
+    body {margin: 10px;}
+    header { font-size: 25px; padding: 30px }
+    *{ font-size: 20px; }
+      .SoulsSeek{
+        margin-bottom: 20px;
+        min-height: 100vh !important;
+        width: 100% !important;
+        height: auto !important;
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+        border-bottom: 2px solid #5e67a0;
+        background-image: url("1.png") !important;
+        background-size:  cover !important;
+        background-position: center;
+        /*will move when scrolled*/
+        position: relative;
+        display: flex; 
+        flex-direction: column !important; 
+        justify-content: flex-start !important; 
+        align-items: center !important; 
+        background-repeat: no-repeat !important;
+        box-sizing: border-box !important;
+      
+    }  
+    
+    .notes-container {
+      margin-bottom: 20px;
+      border-bottom: 2px solid #5e67a0;
+      /*background-image: url("2.png") !important;
+      background-size: cover;
+      background-position: center;
+        /*will move when scrolled*/
+      flex-grow: 0 !important;
+      position: relative !important;
+      width: 100% !important;
+      flex: 0 0 100vh !important;
+      padding: 0 !important;
+      background-repeat: no-repeat !important;
+      height: 100vh;
+    }
+
+    .notes-container iframe {
+      width: 100% !important;
+      height: 100% !important;
+      border: none !important;
+    }
+
+    .artwork-background {
+      background-image: url("3.png") !important;
+      background-size:cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      position: relative !important;
+      width: 100%;
+      height: 100% !important;
+      min-height: 100vh !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    .artwork-stage {
+      width: 100%;
+      height: 100%;
+      min-height: 100vh !important;
+      display: flex !important;
+    }
+
+    .learnMore {
+      width: 100% !important;
+      height: 100vh !important;
+      min-height: 100vh !important;
+      overflow: visible !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    .artwork-panel {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    color: #1e254f;
+    -webkit-text-stroke: 0.5px #b1bdff; 
+  }
+
+  .quote-panel {
+    text-align: center !important;
+    order: 1 !important; /* Ensure the quote panel appears first */
+    position: relative !important;
+    left: auto !important; 
+    top: auto !important;  
+    width: 100% !important;
+    height: 50% !important;
+    min-height: 0 !important;
+    padding: 40px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+
+  }
+
+  .quote-panel p {
+    width: 100%;
+    margin: 0;
+  }
+
+  .calendar-panel {
+    left: auto !important;    
+    top: auto !important;
+    width: 100% !important;
+    height: 50% !important;
+    min-height: 0 !important;
+    padding: 10px !important;
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2; /* Ensure the calendar panel appears second */
+    position: relative !important;
+
+
+  }
+   #calendarStyleInner{
+    font-size: clamp(14px, 5vw, 40px);
+   
+  }
+
+  }

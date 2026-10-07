@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caacupe+One&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <script src="index.js" defer></script>
+    <title>You Dashboard</title>
+</head>
+
+<body>
+    <main>
+        <div class="SoulsSeek" style="display: flex; flex-direction: row; justify-content: center; align-items: stretch; ">
+            <img src="796ccfa2a2c8640d96f6418a743e3174-removebg-preview.png" alt="blue stars" width="80" height="80" style="align-self: left; position: absolute; left: 20px; top: 20px; opacity: 0.8;" />
+            <div style="padding-left: 70px; padding-right: 20px; display: flex; flex-direction: column;  align-items: center; ">
+               <div>
+                    <h1 style="padding-top: 20px;  -webkit-text-stroke: 0.5px black; color: #b1bdff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">HI YOU!</h1>
+                    <p style="font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 20px; ">
+                       <span style="background-color: #d1aff9;"> Ready to explore another day? </span>
+                    </p>
+                </div>
+                <div class="clock" id="clock">
+                    <div>
+                        <span id="hours">00</span>
+                        <span class="text">Hours</span>
+                    </div>
+                    <div>
+                        <span id="minutes">00</span>
+                        <span class="text">Minutes</span>
+                    </div>
+                    <div>
+                        <span id="seconds">00</span>
+                        <span class="text">Seconds</span>
+                    </div>
+                </div>
+                <div>
+                    <iframe data-testid="embed-iframe" style="border-radius:12px; height: 100%;" src="https://open.spotify.com/embed/playlist/09aCpVwb1S7bK17hYo0LXu?utm_source=generator&theme=0&si=1ce91b85dcee4fad" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+
+                
+            </div>
+            <div style="padding-top: 30px; padding-bottom: 10px; flex-grow: 1;" class="notes-container">
+                <iframe src="notes.html" style="border: none; width: 70%; height: 100%; opacity: 0.8;"></iframe>
+            </div>
+
+
+        </div>
+        <section class="learnMore">
+            <div class="artwork-stage">
+                <div class="artwork-background">
+                    <div class="artwork-panel quote-panel">
+                        <p>
+                            <span style="background-color: #d1aff9;"> "Some of your favorite days haven't even happened yet and that's the magic of being alive </span>
+                        </p>
+                    </div>
+                
+                    <div class="artwork-panel calendar-panel">
+                        <script LANGUAGE="JavaScript">
+                        <!--script for calendar from https://www.javascriptfreecode.com coded by: Kerixa Inc.-->
+                        monthnames = new Array(
+                        "January",
+                        "Februrary",
+                        "March",
+                        "April",
+                        "May",
+                        "June",
+                        "July",
+                        "August",
+                        "September",
+                        "October",
+                        "November",
+                        "Decemeber");
+                        var linkcount=0;
+                        function addlink(month, day, href) {
+                        var entry = new Array(3);
+                        entry[0] = month;
+                        entry[1] = day;
+                        entry[2] = href;
+                        this[linkcount++] = entry;
+                        }
+                        Array.prototype.addlink = addlink;
+                        linkdays = new Array();
+                        monthdays = new Array(12);
+                        monthdays[0]=31;
+                        monthdays[1]=28;
+                        monthdays[2]=31;
+                        monthdays[3]=30;
+                        monthdays[4]=31;
+                        monthdays[5]=30;
+                        monthdays[6]=31;
+                        monthdays[7]=31;
+                        monthdays[8]=30;
+                        monthdays[9]=31;
+                        monthdays[10]=30;
+                        monthdays[11]=31;
+                        todayDate=new Date();
+                        thisday=todayDate.getDay();
+                        thismonth=todayDate.getMonth();
+                        thisdate=todayDate.getDate();
+                        thisyear=todayDate.getYear();
+                        thisyear = thisyear % 100;
+                        thisyear = ((thisyear < 50) ? (2000 + thisyear) : (1900 + thisyear));
+                        if (((thisyear % 4 == 0) 
+                        && !(thisyear % 100 == 0))
+                        ||(thisyear % 400 == 0)) monthdays[1]++;
+                        startspaces=thisdate;
+                        while (startspaces > 7) startspaces-=7;
+                        startspaces = thisday - startspaces + 1;
+                        if (startspaces < 0) startspaces+=7;
+                        document.write("<table border=2  id='calendarStyle'>");
+                        document.write("<font color=black>");
+                        document.write("<tr><td colspan=7><center><strong id='calendarStyleInner'>" 
+                        + monthnames[thismonth] + " " + thisyear 
+                        + "</strong></center></font></td></tr>");
+                        document.write("<tr>");
+                        document.write("<td align=center>Su</td>");
+                        document.write("<td align=center>M</td>");
+                        document.write("<td align=center>Tu</td>");
+                        document.write("<td align=center>W</td>");
+                        document.write("<td align=center>Th</td>");
+                        document.write("<td align=center>F</td>");
+                        document.write("<td align=center>Sa</td>"); 
+                        document.write("</tr>");
+                        document.write("<tr>");
+                        for (s=0;s<startspaces;s++) {
+                        document.write("<td> </td>");
+                        }
+                        count=1;
+                        while (count <= monthdays[thismonth]) {
+                        for (b = startspaces;b<7;b++) {
+                        linktrue=false;
+                        document.write("<td>");
+                        for (c=0;c<linkdays.length;c++) {
+                        if (linkdays[c] != null) {
+                        if ((linkdays[c][0]==thismonth + 1) && (linkdays[c][1]==count)) {
+                        document.write("<a href=\"" + linkdays[c][2] + "\">");
+                        linktrue=true;
+                              }
+                           }
+                        }
+                        if (count==thisdate) {
+                        document.write("<font color='#b1bdff'><strong style='-webkit-text-stroke: 0.5px black; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); background-color: #d1aff9; padding: 2px; border-radius: 5px;'>");
+                        }
+                        if (count <= monthdays[thismonth]) {
+                        document.write(count);
+                        }
+                        else {
+                        document.write(" ");
+                        }
+                        if (count==thisdate) {
+                        document.write("</strong></font>");
+                        }
+                        if (linktrue)
+                        document.write("</a>");
+                        document.write("</td>");
+                        count++;
+                        }
+                        document.write("</tr>");
+                        document.write("<tr>");
+                        startspaces=0;
+                        }
+                        document.write("</table></p>");
+                    </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Made for all days - Sofiia G. - All rights reserved - 2026</p>
+        </footer>
+    </main>
+</body>
+
+</html>
