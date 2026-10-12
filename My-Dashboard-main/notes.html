@@ -10,11 +10,12 @@
         <title>Notes App</title>
         <style>
              * { margin: 0; padding: 0; box-sizing: border-box; }
+            html, body { height: 100vh; height: 100dvh; }
             body { font-family: Arial, sans-serif; display: flex; height: 100vh; overflow: hidden; background-color: #f4f4f4; color: #1e254f;}
-            aside { width: 300px; background-color: #f4f4f4; border-right: 1px solid #ccc; flex-direction: column; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+            aside { width: 300px; background-color: #f4f4f4; border-right: 1px solid #ccc; flex-direction: column; box-shadow: 0 2px 5px rgba(0,0,0,0.2); display: flex; min-width: 0px; flex: 0 0 300px; }
             header { font-size: 1.5em; padding: 20px; border-bottom: 1px solid #ccc; }
             #search-notes { padding: 10px; width: 100%; font-size: 1rem; border: none; border-bottom: 1px solid #ccc; background-color: #b1bdff; color: #1e254f; }
-            #note-list { flex: 1; overflow-y: auto; }
+            #note-list { flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
             .note-item { padding: 15px; border-bottom: 1px solid #ccc; cursor: pointer; position: relative; }
             .note-item.active { background-color: #d1aff9; }
             .note-item small { color: #8d66bb; }
@@ -42,18 +43,19 @@
             .button-delete:hover { background-color: #b45151; }
             /* Responsive/ mobile/tablet device Design */
             @media only screen and (max-width: 600px) {
-                aside { width: 45vw; margin: 10px; min-width: 100px;  }   
+                aside { width: min(80vw, 200px); margin: 0px; min-width: 0; flex: 0 0 min(80vw, 200px); height: 100%; min-height: 0; }   
+                aside > button[onclick="createNote()"] {flex: 0 0 auto; width: 100%; margin-top: 10px; position: sticky; bottom: 10; z-index: 2; padding: max(20px, env(safe-area-inset-bottom));  padding-bottom: 20px; }
                 body {margin: 10px;}
-                header { font-size: 25px; padding: 30px }
+                header { font-size: 1.25rem; padding: 30px; flex: 0 0 auto; }
                 *{ font-size: 20px; }
-                
+                main { padding-left: 0px; padding-right: 10px; } 
 
             }
             .wrap { display: flex; height: 100%; width: 100%; }
             .toggle-panel { display: none; width: 50px; height: 70px; flex-shrink: 0; display:grid; place-items: center; margin: 10px; margin-left: 0px; margin-top: 0px; background-color: #b1bdff; box-shadow: 0 2px 5px rgba(0,0,0,0.2); border: none; padding: 20px; cursor: pointer; border-radius: 0px 5px 5px 0px; }
             .icon-close { display: none !important; }
             .side-panel { display:none;}
-            .side-panel-open.side-panel-open { display: initial; }
+            .side-panel-open.side-panel-open { display: flex; }
             .icon-open { display: none !important;  }
             .icon-close { display: inline !important; }
             .side-panel-open + .toggle-panel .icon-open { display: none !important;  }
@@ -84,15 +86,15 @@
             </button>
         <main>
             <div class="note-header">
-                <input id="note-title" type="text" placeholder="Note Title" oninput="updateCurrentNote()">
                 <button id="pin-note" onclick="togglePin()">Pin</button>
+                <input id="note-title" type="text" placeholder="Note Title" oninput="updateCurrentNote()">
             </div>
             <div class="note-body">
                 <textarea id="note-content" placeholder="Write your note here to start your perfect day..." oninput="updateCurrentNote()"></textarea>
             </div>
             <div class="controls">
-                <span id="note-date">Last edited: -</span>
                 <button onclick="showModal()">Delete Note</button>
+                <span id="note-date" style="padding: 5px;">Last edited: -</span>
             </div>
         </main>
         <div class="modal" id="delete-modal">
