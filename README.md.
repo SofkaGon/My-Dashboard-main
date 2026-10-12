@@ -1,0 +1,49 @@
+Daily Dashboard
+
+Your day, organized in one place.
+
+Daily Dashboard is an interactive web application designed to help you start your day prepared, focused, and organized. It brings together the essential tools you need in one convenient place, so you can manage your day without constantly reaching for your phone.
+
+✨ Features
+- Notes & Thoughts - Write down your ideas, reminders, and thoughts throughout the day.
+- Clock - Check the current time at a glance.
+- Music - Listen to music while planning your day or staying productive.
+- Calendar - Keep track of dates and stay organized.
+- Responsive Design - Enjoy a seamless experience on both desktop and mobile devices.
+
+The goal of Daily Dashboard is to create a simple, accessible, and distraction-free space for everyday planning. Whether you're getting ready for school, work, or personal projects, everything you need to start your day is just one click away.
+
+Less scrolling, more focus. Start your day your way!
+
+💻 Technologies
+HTML
+CSS
+JavaScript
+
+🚀 Getting Started
+
+You can access Daily Dashboard online through the deployed website, or run it locally on your computer.
+
+Run Locally
+
+Clone this repository:
+
+git clone https://github.com/SofkaGon/My-Dashboard-main.git
+
+Navigate to the project folder:
+
+cd My-Dashboard-main
+Open index.html in your browser.
+📱 Compatibility
+
+Daily Dashboard is designed to adapt to different screen sizes, providing a user-friendly experience on both desktop and mobile devices.
+
+🌐 Live Demo
+
+Try it here: https://sofkagon.github.io/My-Dashboard-main/
+
+📄 License
+
+This project is open for personal use and learning. 
+If you want to change music playlist or customize it, please first copy code into your own repository before creating any changes. 
+If you want to distribute it in any way please give credit to me (SofkaGon or Sofiia Gontar) as a scource!
