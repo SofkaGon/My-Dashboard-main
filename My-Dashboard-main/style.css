@@ -260,9 +260,13 @@ body{
 
     .artwork-stage {
       width: 100%;
-      height: 100%;
+      height: auto!important;
       min-height: 100vh !important;
-      display: flex !important;
+      display: block !important;
+      aspect-ratio: auto !important;
+      position: relative !important;
+
+
     }
 
     .learnMore {
